@@ -119,9 +119,6 @@ public class TestData {
 		
 		actor.addFilmography(media);
 		media.addCast(actor);
-		//actors.get(actorindex).addFilmography(getMedias().get(mediaindex));
-	//	getMedias().get(mediaindex).addCast(actors.get(actorindex));
-
 	}
 	
 	private void createConnectionBetweenReviewsAndUsers(Integer reviewindex, Integer userindex) {
