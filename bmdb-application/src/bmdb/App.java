@@ -18,7 +18,6 @@ public class App {
 	
 	public static void main(String[] args) {
 		App app = new App(new View(),new Service());
-		System.out.println("sajt");
 		app.medias= app.service.findAllMedia();
 		app.play();
 		
