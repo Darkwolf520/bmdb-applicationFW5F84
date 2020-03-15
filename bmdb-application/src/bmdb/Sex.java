@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 public enum Sex {
 	MALE,FEMALE;

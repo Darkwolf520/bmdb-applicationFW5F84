@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

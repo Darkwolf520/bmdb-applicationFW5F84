@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 import java.io.Console;
 

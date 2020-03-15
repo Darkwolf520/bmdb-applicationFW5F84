@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 public class ReviewBuilder implements Builder {
 	private String text;

@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 public interface Builder {
 	void initialise();

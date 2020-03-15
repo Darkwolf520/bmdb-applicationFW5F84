@@ -1,4 +1,4 @@
-package MBD;
+package bmdb;
 
 import java.util.HashMap;
 import java.util.Map;
