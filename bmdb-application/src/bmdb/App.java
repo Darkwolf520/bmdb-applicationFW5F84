@@ -8,6 +8,7 @@ import java.text.DecimalFormat;
 
 
 public class App {
+	User user;
 	Review review;
 	List<Media> medias;
 	Media selectedMedia;
@@ -34,7 +35,8 @@ public class App {
 	public void play() {
 		boolean again = true;
 		
-		service.saveUser(view.readUserData());
+		this.user=view.readUserData();
+		service.saveUser(this.user);
 		
 		while(again) {
 			
@@ -46,7 +48,7 @@ public class App {
 			} while(this.selectedMedia == null );
 			
 			this.doReview();
-			service.saveReview(this.selectedMedia,this.review);
+			this.service.saveReview(this.selectedMedia,this.review);
 			this.printReviewAverage();
 			again = view.doesUserWantAnotherReview();
 		}
@@ -55,11 +57,12 @@ public class App {
 	}
 	
 	void createUser() {
-		service.saveUser(view.readUserData());
+		this.service.saveUser(view.readUserData());
 	}
 	
 	void doReview() {
-		review = new Review(view.readNewReview(), view.newRating());
+		this.review = new Review(view.readNewReview(), view.newRating());
+		this.review.setReviewOwner(this.user);
 	}
 	
 	void printReviewAverage() {
